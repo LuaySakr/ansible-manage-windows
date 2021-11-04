@@ -1,0 +1,7 @@
+
+- name: Run powershell script
+  hosts: win 
+  gather_facts: false
+  tasks:
+    - name: Run powershell script
+      script: files/helloworld.ps1

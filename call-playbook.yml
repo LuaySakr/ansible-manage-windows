@@ -1,0 +1,3 @@
+- import_playbook: copy.yml
+- import_playbook: check.yml
+- import_playbook: msi.yml

@@ -14,6 +14,8 @@ ansible-galaxy collection install ansible.windows
 sudo nano /etc/ansible/hosts
 
 
+
+
 [win]
 10.0.2.7
 [win:vars]
@@ -23,3 +25,19 @@ ansible_port=5986
 ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
 
+
+
+
+Run  
+ansible win -m ansible.windows.win_ping
+and look for this message
+SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+
+
+
+to run a play book
+move dir to playbooks location
+ansible-playbook fiename.yml
